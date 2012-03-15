@@ -1,0 +1,24 @@
+<%= form_for(@patient) do |f| %>
+   
+   
+    <%= f.label      :name %><br />
+    <%= f.text_field :name %><br />
+     
+    <%= f.label      :phone %><br />
+    <%= f.text_field :phone %><br />
+     
+   <%= f.label       :address %><br />
+    <%= f.text_field :address_line_1 %><br />
+   <%= f.text_field  :address_line_2 %><br />
+   <%= f.text_field  :address_line_3 %><br />
+    
+    <%= f.label      :suffering_from %><br />
+    <%= f.text_field :suffering_from %><br />
+    <%= f.hidden_field :user_id, :value => current_user.id %>   
+    
+    <%= f.fields_for :allergy do |bud|%>
+    <%= render "allergy", :f => bud %> 
+    <% end %>  
+      
+    <%= f.submit "Create" %>
+<% end %> 

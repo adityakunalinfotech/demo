@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doctor</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       <ul class>
+       <li><%= link_to "Home", root_path %></li>
+           <% if user_signed_in? %>
+       <li><%= link_to "Sign out", "/users/sign_out" %></li>
+           <% else %>
+       <li><%= link_to "Sign in",  "/users/sign_in" %></li>
+       <li><%= link_to "Sign up",  "/users/sign_up" %></li>
+          <% end %>
+       </ul>
+      <%= yield %>
+
+</body>
+</html>
