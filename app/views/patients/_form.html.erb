@@ -16,9 +16,41 @@
     <%= f.text_field :suffering_from %><br />
     <%= f.hidden_field :user_id, :value => current_user.id %>   
     
+    <p id="aller">
     <%= f.fields_for :allergy do |bud|%>
     <%= render "allergy", :f => bud %> 
-    <% end %>  
+    <% end %>
+    </p>
+    <p id="immu">
+    <%= f.fields_for :immunization do |bud|%>
+    <%= render "immunization", :f => bud %> 
+    <% end %>
+    </p>
+    <p id="insu">
+    <%= f.fields_for :insurance do |bud|%>
+    <%= render "insurance", :f => bud %> 
+    <% end %>
+    </p>
+    <p id="medi">
+    <%= f.fields_for :medication do |bud|%>
+    <%= render "medication", :f => bud %> 
+    <% end %>
+    </p>
+    <p id="prob">
+    <%= f.fields_for :problem do |bud|%>
+    <%= render "problem", :f => bud %> 
+    <% end %>
+    </p>
+    <p id="proced">
+    <%= f.fields_for :procedure do |bud|%>
+    <%= render "procedure", :f => bud %> 
+    <% end %>
+    </p>
+    <p id="res">
+    <%= f.fields_for :result do |bud|%>
+    <%= render "result", :f => bud %> 
+    <% end %>
+    </p>
       
     <%= f.submit "Create" %>
 <% end %> 
