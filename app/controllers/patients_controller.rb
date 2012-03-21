@@ -1,8 +1,15 @@
 class PatientsController < ApplicationController
   def new
     @patient = Patient.new
-     #allergy = @patient.allergies
-     @patient.allergies.build(params[:allergies])
+     allergy = @patient.allergies
+     immunization = @patient.immunizations
+     insurance    = @patient.insurances
+     problem = @patient.problems
+     medication = @patient.medications
+     procedure = @patient.procedures
+     result = @patient.results
+     
+     # @patient.allergies.build
      # respond_to do |format|
       # format.html # new.html.erb
       # format.json { render json: @patient }

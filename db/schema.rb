@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120314093827) do
+ActiveRecord::Schema.define(:version => 20120321100250) do
 
   create_table "allergies", :force => true do |t|
     t.string   "allergic"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20120314093827) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patient_id"
   end
 
   create_table "categories_ds", :force => true do |t|
@@ -77,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20120314093827) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patient_id"
   end
 
   create_table "insurances", :force => true do |t|
@@ -94,6 +96,7 @@ ActiveRecord::Schema.define(:version => 20120314093827) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patient_id"
   end
 
   create_table "medications", :force => true do |t|
@@ -109,6 +112,7 @@ ActiveRecord::Schema.define(:version => 20120314093827) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patient_id"
   end
 
   create_table "patients", :force => true do |t|
@@ -132,6 +136,7 @@ ActiveRecord::Schema.define(:version => 20120314093827) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patient_id"
   end
 
   create_table "procedures", :force => true do |t|
@@ -142,6 +147,7 @@ ActiveRecord::Schema.define(:version => 20120314093827) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patient_id"
   end
 
   create_table "results", :force => true do |t|
@@ -155,6 +161,7 @@ ActiveRecord::Schema.define(:version => 20120314093827) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "patient_id"
   end
 
   create_table "roles", :force => true do |t|
