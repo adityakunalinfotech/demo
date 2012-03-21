@@ -10,6 +10,7 @@ gem 'mysql2'
 gem 'json'
 gem "devise", "1.2.rc"
 gem "cancan"
+gem "nested_form", :git => 'https://github.com/ryanb/nested_form.git'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

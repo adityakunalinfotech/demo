@@ -1,20 +1,18 @@
 class PatientsController < ApplicationController
   def new
     @patient = Patient.new
-     allergy = @patient.allergies
-     respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @patient }
-     end
+     #allergy = @patient.allergies
+     @patient.allergies.build(params[:allergies])
+     # respond_to do |format|
+      # format.html # new.html.erb
+      # format.json { render json: @patient }
+     # end
   end
 
   def index
       # @a = current_user.id
-      # @patients = Patient.find_by_id(params[:id])
-      # respond_to do |format|
-      # format.html # index.html.erb
-      # format.json { render json: @patients }
-      # end
+   @patients = Patient.find_by_id(params[:id])
+      
   end
 
  def show
